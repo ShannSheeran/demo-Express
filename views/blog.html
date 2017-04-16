@@ -1,0 +1,22 @@
+<% include header.html %>
+<p><a href="/">Index</a></p>
+<table class="table table-striped">
+    <caption>Exhibition</caption>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>英文标题</th>
+        <th>查看</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% data.forEach(function(v) { %>
+    <tr>
+        <td><%= v.p_id %></td>
+        <td><%= v.entitle %></td>
+        <td><a href="/blog/<%= v.p_id %>">详情</a></td>
+    </tr>
+    <% }); %>
+    </tbody>
+</table>
+<% include footer.html %>
